@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    background-size: contain;
+    height: 100vh;
+}
+
+.img img {
+    width: 100%;
+}
+
+main {
+    margin-bottom: 40px;
+}
+
+.section-1 {
+    padding: 50px 24px 30px 24px;
+}
+
+.header img {
+    padding: 25px;
+    width: 40%;
+}
+
+.heading-1 {
+    text-align: center;
+    letter-spacing: 10px;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.heading-1 span {
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+}
+
+.paragraph {
+    color: hsl(0, 36%, 70%);
+    text-align: center;
+    line-height: 30px;
+}
+
+.section-2 {
+    position: relative;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+div.img-desktop {
+    display: none;
+}
+
+.section-2 input {
+    display: flex;
+    justify-content: center;
+    height: 45px;
+    width: 100%;
+    border-radius: 50px;
+    padding-left: 20px;
+    border: 1px solid hsl(0, 36%, 70%);
+}
+
+input.change {
+    border: 2px solid hsl(0, 93%, 68%);
+}
+
+.section-2 input::placeholder {
+    color: hsl(0, 36%, 70%);
+}
+
+button {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    right: 0;
+    padding: 10px 25px;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 4px 10px hsl(0deg 80% 86%);
+}
+
+.error-img {
+    position: absolute;
+    top: 10px;
+    right: calc(0% + 75px);
+    visibility: hidden;
+    transition: visibility .4s;
+}
+
+.error-img.change {
+    visibility: visible;
+}
+
+.message {
+    padding: 10px 40px;
+    visibility: hidden;
+    transition: visibility .4s;
+}
+
+.message.change {
+    visibility: visible;
+}
+
+.message span {
+    color: hsl(0, 93%, 68%);
+    font-size: 12px;
+}
+
+
+/* Responsive */
+
+@media (min-width: 768px) {
+    body {
+        background: none;
+    }
+    main {
+        display: flex;
+    }
+    .desktop-section-1 {
+        padding: 40px 115px 0 110px;
+        background: url(images/bg-pattern-desktop.svg) left -190px no-repeat;
+        background-size: cover
+    }
+    .section-1 {
+        width: 60%;
+    }
+    .heading-1 {
+        text-align: start;
+        font-size: 52px;
+    }
+    .header img {
+        width: 24%;
+    }
+    .paragraph {
+        width: 130%;
+        text-align: left;
+    }
+    div.img {
+        display: none;
+    }
+    div.img-desktop {
+        display: table;
+        float: right;
+    }
+    .section-2 {
+        padding-left: 24px;
+        left: 0;
+        transform: translateX(0);
+        width: 60%;
+    }
+    .img-desktop img {
+        height: 100vh;
+        width: 615px;
+    }
+}
